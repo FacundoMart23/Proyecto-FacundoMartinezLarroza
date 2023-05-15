@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Khand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+header {
+    background: #ffffff
+    
+}
+
+header .logo {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 25px 30px;
+    color: #000000;
+}
+
+
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar__ul {
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar__li a {
+    font-size: 1.4rem;
+    font-family: 'Kanit', sans-serif;
+    color: #000000;
+}
+
+
+
+
+.image img {
+    height: 25rem;
+
+}
+
+
+.container__image {
+    display: none;
+}
+
+.grid__image1 {
+    height: 19rem;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.grid__image1 {
+    height: 10px;
+}
+
+.grid__texto {
+    display: none;
+}
+
+.checkbtn {
+    font-size: 2rem;
+    color: #000;
+    float: right;
+    line-height: 3.5rem;
+    margin-right: 1rem;
+}
+
+.hero img {
+    height: 2rem;
+    margin-left: 1.5rem;
+}
+
+/*------------Aplicando Media queri con resolucion minima de 768px---------*/
+
+@media (min-width:768px) {
+header .container {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 3.5rem;
+}
+
+.navbar__ul {
+ flex-direction: row;
+ padding: 0;
+}
+
+.checkbtn {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.navbar__li a {
+    margin-left: 1.5rem;
+    font-size: 0.9rem;
+    transition: all 850ms;
+    padding: 0.8rem;
+    border-radius: 40%;
+    
+}
+
+.navbar__li a:hover {
+    background-color: #eeeded;
+    
+}
+
+
+
+header .logo {
+    padding: 0;
+}
+
+
+
+.grid__image1  {
+    height: 30rem;
+}
+
+/* ------------------------Definiendo Grid y acomodando en cada grilla------ */
+.grid {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows:min-content min-content min-content;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)     
+    )   
+    ,url(https://fondosmil.com/fondo/24298.jpg);
+
+    
+
+    grid-template-areas: 
+    "precio   precio  image1"
+    "texto    texto  image1"
+    "boton   boton   image1" ;
+}
+
+.boton.uno::after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: #ffffff;
+	position: absolute;
+	z-index: 1;
+	top: -60px;
+	left: 0;
+	transition: .3s ease-in-out all;
+}
+
+.boton.uno:hover::after {
+	top: 0;
+    
+}
+
+.boton {
+    grid-area: boton;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 6rem;
+	height: 60px;
+	background: #141414;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 0.9rem;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: .250ms ease all;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+    margin: auto;
+}
+
+.boton:hover {
+    color: #141414;
+}
+
+.boton span {
+	position: relative;
+	z-index: 2;
+	transition: .3s ease all;
+}
+
+.grid__image1 {
+    grid-area: image1;
+    margin: auto;
+}
+
+.grid__precio {
+    font-family: 'Kanit', sans-serif;
+}
+
+.grid__h2 {
+    grid-area: precio;
+    color: #fff;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    margin: auto;
+    font-size: 2.8rem;
+
+
+}
+
+.grid__texto {
+    grid-area: texto;
+    color: #fff;
+    margin: auto;
+    padding: 2rem;
+    font-family: 'Kanit', sans-serif;
+    display: block;
+
+}
+
+/* ------------------------Fin Grid-------- */
+
+.grid__op {
+    height: 9.8vh;
+    background: linear-gradient(90deg, rgba(102,154,246,1) 18%, rgba(140,140,140,1) 87%);
+}
+
+.grid__op {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.grid__op p {
+    font-family: 'Kanit', sans-serif;
+    font-size: 2.5rem; 
+    color: #fff;
+}
+
+.hero {
+    height: 7rem;
+    background: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.hero img {
+    height: 5rem;
+    padding: .5rem;
+}
+
+.hero__ul {
+    display: flex;
+}
+
+.hero__ul a {
+    padding: 1.5rem;
+    margin-right: 2.5rem;
+    color: #000000;
+    font-family: 'Kanit', sans-serif;
+    
+}
+
+.hero p {
+    color: #000000;
+    font-family: 'Kanit', sans-serif;
+}
+
+}
+
+/* Fin--media--queris------ */
+
+@media (max-width:1260px) {
+    .grid__image1 {
+        height: 17rem;
+    }
+
+    .grid__texto {
+        font-size: .7rem;
+    }
+
+    .grid__h2 {
+        font-size: 1.8rem;
+        margin-top: .6rem;
+    }
+
+    .hero p {
+        display: none;
+    }
+
+    .boton {
+        height: 40px;
+        margin: 1rem auto;
+    }
+
+    .boton.uno::after {
+        top: -40px;
+    }
+
+    .grid__op p {
+        font-size: 2rem;
+        margin: auto;
+    }
+
+    .grid__op {
+        height: 8vh;
+        background: linear-gradient(90deg, rgba(102,154,246,1) 18%, rgba(140,140,140,1) 87%);
+    }
+
+    header .logo {
+        margin-left: .5rem;
+    }
+}
+
+/* -----------APLICANDO MEDIA QUERIS DE 1261PX--------- */
+
+@media (min-width:1261px) {
+    .grid__image1 {
+        height: 25rem;
+    }
+
+    .grid__h2 {
+        font-size: 2.2rem;
+    }
+
+    .boton {
+        margin-bottom: 1rem;
+    }
+}
+
+/* ----------APLICANDO MEDIA QUERIS DE 767PX----- */
+
+@media (max-width:767px) {
+    .grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)     
+    )   
+    ,url(https://fondosmil.com/fondo/24298.jpg);
+        
+    }
+
+    .grid__image1 {
+        height: 21rem;
+        width: 20rem;
+        margin: auto;
+        
+    }
+
+    .boton.uno::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        position: absolute;
+        z-index: 1;
+        top: -40px;
+        left: 0;
+        transition: .3s ease-in-out all;
+    }
+    
+    .boton.uno:hover::after {
+        top: 0;
+        
+    }
+    
+    .boton {
+        grid-area: boton;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 6rem;
+        height: 40px;
+        background: #141414;
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.9rem;
+        border: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: .250ms ease all;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+        margin: 1rem auto;
+    }
+    
+    .boton:hover {
+        color: #141414;
+    }
+    
+    .boton span {
+        position: relative;
+        z-index: 2;
+        transition: .3s ease all;
+    }
+
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+    }
+
+    .hero ul {
+        display: flex;
+    }
+
+    .hero img {
+        padding: .4rem;
+        height: 3rem;
+    }
+
+    .hero__li a {
+        padding: .5rem;
+        color: #000;
+        font-family: 'Kanit', sans-serif;
+    }
+
+    .grid__h2 {
+        display: none;
+    }
+
+    .navbar__ul {
+        display: none;
+        
+    }
+
+    .grid__op p {
+        color: #fff;
+        font-family: 'Kanit', sans-serif;
+        font-size: 1.5rem;
+    
+    }
+
+    .grid__op {
+        display: flex;
+    }
+
+    .villan h2 {
+        font-size: 1.5rem;
+    }
+
+    .villan p {
+        font-size: 1.5rem;
+    }
+
+
+    }
+
+
+/* ----------MODIFICANDO HTML DE CONTACTO---------- */
+
+.villan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding: 3rem;
+    align-items: center;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)     
+    )   
+    ,url(https://fondosmil.com/fondo/24298.jpg);
+}
+
+.villan h2 {
+    padding: 1rem;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+}
+
+.villan p {
+    padding: 1rem;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+}
+
+
